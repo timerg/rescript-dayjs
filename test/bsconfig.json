@@ -1,0 +1,23 @@
+{
+  "name": "@ggteven/rescript-dayjs-test",
+  "namespace": false,
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": [
+    {
+      "dir": "__tests__",
+      "subdirs": true
+    }
+  ],
+  "bs-dependencies": [
+    "@ggteven/rescript-dayjs",
+    "@glennsl/bs-jest"
+  ],
+  "package-specs": [{
+    "module": "commonjs",
+    "in-source": true
+  }],
+  "suffix": ".bs.js",
+  "bsc-flags": ["-bs-super-errors"]
+}

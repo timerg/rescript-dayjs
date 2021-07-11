@@ -1,0 +1,32 @@
+{
+  "name": "@ggteven/rescript-dayjs",
+  "version": "1.0.0",
+  "description": "A rescript binding for dayjs",
+  "scripts": {
+    "build": "rescript build -with-deps",
+    "watch": "rescript build -w -with-deps",
+    "clean": "rescript clean -with-deps"
+  },
+  "peerDependencies": {
+    "rescript": "^9.1.2",
+    "dayjs": "^1.10.6"
+  },
+  "devDependencies": {
+    "dayjs": "^1.10.6",
+    "rescript": "^9.1.2"
+  },
+  "files": [
+    "/src",
+    "/bsconfig.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timerg/rescript-dayjs.git"
+  },
+  "author": "ggteven",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timerg/rescript-dayjs/issues"
+  },
+  "homepage": "https://github.com/timerg/rescript-dayjs"
+}

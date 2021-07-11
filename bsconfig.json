@@ -1,0 +1,21 @@
+{
+  "name": "@ggteven/rescript-dayjs",
+  "reason": {
+    "react-jsx": 3
+  },
+  "namespace": false,
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "warnings": {
+    "number": "-103"
+  },
+  "suffix": ".bs.js"
+}
