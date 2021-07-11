@@ -13,13 +13,6 @@
     "rescript": "^9.1.2",
     "@ggteven/rescript-dayjs": "../"
   },
-  "keywords": [
-    "reasonml",
-    "reason",
-    "rescript",
-    "dayjs",
-    "binding"
-  ],
   "author": "ggteven",
   "license": "MIT"
 }

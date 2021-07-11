@@ -31,4 +31,4 @@ Day.extend(plugin)
 Day.now()->isToday // true
 ```
 
-Check (Dayjs documentation)[https://day.js.org/docs/en/installation/installation] for available props.
+Check [Dayjs documentation](https://day.js.org/docs/en/installation/installation) for available props.

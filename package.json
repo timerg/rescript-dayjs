@@ -1,6 +1,6 @@
 {
   "name": "@ggteven/rescript-dayjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A rescript binding for dayjs",
   "scripts": {
     "build": "rescript build -with-deps",
@@ -28,5 +28,12 @@
   "bugs": {
     "url": "https://github.com/timerg/rescript-dayjs/issues"
   },
-  "homepage": "https://github.com/timerg/rescript-dayjs"
+  "homepage": "https://github.com/timerg/rescript-dayjs",
+  "keywords": [
+    "reasonml",
+    "reason",
+    "rescript",
+    "dayjs",
+    "binding"
+  ]
 }
