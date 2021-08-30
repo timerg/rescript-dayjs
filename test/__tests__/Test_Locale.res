@@ -2,7 +2,7 @@ open Jest
 open ExpectJs
 open Day
 
-module Locale = Day_Locale.Make({
+module Locale = Day_Locale.Use({
   let locales = [Day_Locale.de, Day_Locale.en]
 })
 

@@ -39,6 +39,18 @@ type rec parsable = Parsable('a): parsable
 @send external setMonth: (dayjs, float) => dayjs = "month"
 @send external setYear: (dayjs, float) => dayjs = "year"
 
+let _month = #month
+let _year = #year
+let _hour = #hour
+let _minute = #minute
+let _second = #second
+let _millisecond = #millisecond
+let _date = #date
+let _day = #day
+// These two is hidden and appear only in their corresponding plugins
+// let _quarter = #quarter
+// let _isoWeek = #isoWeek
+
 type basicUnits = [
   | #month
   | #year
@@ -71,11 +83,12 @@ external add: (
     | basicUnits
     | #day
     | #week
+    | #quarter
   ],
 ) => dayjs = "add"
 
 @send
-external subtract: (dayjs, float, [basicUnits | #week | #day]) => dayjs = "subtract"
+external subtract: (dayjs, float, [basicUnits | #week | #day | #quarter]) => dayjs = "subtract"
 
 @send
 external startOf: (
@@ -85,6 +98,8 @@ external startOf: (
     | #week
     | #date
     | #day
+    | #quarter
+    | #isoWeek
   ],
 ) => dayjs = "startOf"
 
@@ -96,6 +111,8 @@ external endOf: (
     | #week
     | #date
     | #day
+    | #quarter
+    | #isoWeek
   ],
 ) => dayjs = "endOf"
 
@@ -136,28 +153,88 @@ external daysInMonth: (dayjs, unit) => int = "daysInMonth"
 external isBefore: (dayjs, dayjs) => bool = "isBefore"
 
 @send
-external isBeforeBy: (dayjs, dayjs, [basicUnits | #date | #day]) => bool = "isBefore"
+external isBeforeBy: (
+  dayjs,
+  dayjs,
+  [
+    | basicUnits
+    | #date
+    | #day
+    | #quarter
+    | #isoWeek
+  ],
+) => bool = "isBefore"
 
 @send
-external isBeforeParsableBy: (dayjs, parsable, [basicUnits | #date | #day]) => bool = "isBefore"
+external isBeforeParsableBy: (
+  dayjs,
+  parsable,
+  [
+    | basicUnits
+    | #date
+    | #day
+    | #quarter
+    | #isoWeek
+  ],
+) => bool = "isBefore"
 
 @send
 external isAfter: (dayjs, dayjs) => bool = "isAfter"
 
 @send
-external isAfterBy: (dayjs, dayjs, [basicUnits | #date | #day]) => bool = "isAfter"
+external isAfterBy: (
+  dayjs,
+  dayjs,
+  [
+    | basicUnits
+    | #date
+    | #day
+    | #quarter
+    | #isoWeek
+  ],
+) => bool = "isAfter"
 
 @send
-external isAfterParsableBy: (dayjs, parsable, [basicUnits | #date | #day]) => bool = "isAfter"
+external isAfterParsableBy: (
+  dayjs,
+  parsable,
+  [
+    | basicUnits
+    | #date
+    | #day
+    | #quarter
+    | #isoWeek
+  ],
+) => bool = "isAfter"
 
 @send
 external isSame: (dayjs, dayjs) => bool = "isSame"
 
 @send
-external isSameBy: (dayjs, dayjs, [basicUnits | #date | #day]) => bool = "isSame"
+external isSameBy: (
+  dayjs,
+  dayjs,
+  [
+    | basicUnits
+    | #date
+    | #day
+    | #quarter
+    | #isoWeek
+  ],
+) => bool = "isSame"
 
 @send
-external isSameParsableBy: (dayjs, parsable, [basicUnits | #date | #day]) => bool = "isSame"
+external isSameParsableBy: (
+  dayjs,
+  parsable,
+  [
+    | basicUnits
+    | #date
+    | #day
+    | #quarter
+    | #isoWeek
+  ],
+) => bool = "isSame"
 
 @module("dayjs")
 external isDayjs: parsable => bool = "isDayjs"
