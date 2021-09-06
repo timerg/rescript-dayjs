@@ -9,13 +9,4 @@ module Impl = {
   external tz: (Day.dayjs, string) => Day.dayjs = "tz"
 }
 
-module Use = (
-  Day: {
-    let extend: Day.plugin => unit
-  },
-) => {
-  Day.extend(plugin)
-  include Impl
-}
-
 include Impl

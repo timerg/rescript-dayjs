@@ -7,18 +7,8 @@ module Impl = {
   @send external isoWeekday: (Day.dayjs, unit) => float = "isoWeekday"
   @send external setIsoWeekday: (Day.dayjs, float) => Day.dayjs = "isoWeekday"
   @send external isoWeekYear: (Day.dayjs, unit) => float = "isoWeekYear"
-  @send external setIsoWeekYear: (Day.dayjs, float) => Day.dayjs = "isoWeekYear"
 
   let _isoWeek = #isoWeek
-}
-
-module Use = (
-  Day: {
-    let extend: Day.plugin => unit
-  },
-) => {
-  Day.extend(plugin)
-  include Impl
 }
 
 include Impl

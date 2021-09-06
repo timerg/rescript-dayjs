@@ -6,13 +6,4 @@ module Impl = {
   @send external setWeekday: (Day.dayjs, float) => Day.dayjs = "weekday"
 }
 
-module Use = (
-  Day: {
-    let extend: Day.plugin => unit
-  },
-) => {
-  Day.extend(plugin)
-  include Impl
-}
-
 include Impl
