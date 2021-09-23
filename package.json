@@ -1,6 +1,6 @@
 {
   "name": "@ggteven/rescript-dayjs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A rescript binding for dayjs",
   "scripts": {
     "build": "rescript build -with-deps",
