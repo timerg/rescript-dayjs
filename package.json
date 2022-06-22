@@ -8,11 +8,11 @@
     "clean": "rescript clean -with-deps"
   },
   "peerDependencies": {
-    "rescript": "^9.1.2",
-    "dayjs": "^1.10.6"
+    "dayjs": "^1.11.3",
+    "rescript": "^9.1.2"
   },
   "devDependencies": {
-    "dayjs": "^1.10.6",
+    "dayjs": "^1.11.3",
     "rescript": "^9.1.2"
   },
   "files": [
